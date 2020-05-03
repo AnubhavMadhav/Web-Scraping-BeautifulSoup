@@ -15,9 +15,14 @@ r = requests.get(url)
 htmlContent = r.content
 # print(htmlContent)
 
+
+
 # Step 2:
 # Parse HTML
 soup = BeautifulSoup(htmlContent, 'html.parser')
-print(soup)
+# print(soup)
+print(soup.prettify)
+
+
 # Step 3:
 # HTML Tree Traversal
