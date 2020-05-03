@@ -21,8 +21,26 @@ htmlContent = r.content
 # Parse HTML
 soup = BeautifulSoup(htmlContent, 'html.parser')
 # print(soup)
-print(soup.prettify)
+# print(soup.prettify)
 
 
 # Step 3:
 # HTML Tree Traversal
+
+# Commonly used type of objects
+# 1. Tag
+# 2. NavigableString
+# 3. BeautifulSoup
+# 4. Comment
+
+# Get the title of HTML Page
+title = soup.title
+
+# print(type(soup))               # <class 'bs4.BeautifulSoup'>
+# print(type(title))              # <class 'bs4.element.Tag'>
+# print(type(title.string))       # <class 'bs4.element.NavigableString'>
+
+
+# Get all the paragraphs from HTML
+paras = soup.find_all('p')
+print(paras)
