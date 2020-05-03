@@ -13,11 +13,11 @@ url = "https://www.codewithharry.com/"
 # Get the HTML
 r = requests.get(url)
 htmlContent = r.content
-print(htmlContent)
+# print(htmlContent)
 
 # Step 2:
 # Parse HTML
-
-
+soup = BeautifulSoup(htmlContent, 'html.parser')
+print(soup)
 # Step 3:
 # HTML Tree Traversal
